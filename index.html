@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formContainer bg-info py-5">
+        <div class="container">
+            <h1 class="text-center py-4">Form Data</h1>
+
+            <div class="content">
+                <label for="ProductName">Product Name: </label>
+                <input type="text" id="ProductName" class="form-control mb-3">
+                <label for="ProductPrice">Product Price: </label>
+                <input type="text" id="ProductPrice" class="form-control mb-3">
+                <label for="ProductDesc">Product Desc: </label>
+                <input type="text" id="ProductDesc" class="form-control mb-3">
+                <label for="ProductCat">Product Cat: </label>
+                <input type="text" id="ProductCat" class="form-control mb-3">
+                <div class="d-flex justify-content-center gap-4">
+                    <button class="btn btn-warning btn-outline-secondary" onclick="addAndUpdate()" id="addbutton">Add Product</button>
+                    <button class="btn btn-warning btn-outline-dark" onclick="clearProduct()">Clear</button>
+                </div>
+            
+            </div>
+            <div class="search w-75 mx-auto">
+                <input type="text" class="form-control my-5" id="inputSearch" placeholder="Search" 
+                oninput="searchProduct(this.value)">
+                <button class="btn btn-warning btn-outline-dark d-flex flex-end" onclick="clearInputs()">Clear Table</button>
+            </div>
+            <div class="tableData py-5">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Desc</th>
+                        <th>Cat</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
